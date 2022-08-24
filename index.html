@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+	<link rel="shortcut icon" href="./images/lupa.png" type="image/x-icon">
+    <title>Encriptador ONE</title>
+</head>
+<body>
+	<header id="encabezado">
+		<img class="logo" src="./images/Logo.png" alt="Logo alura">
+		<h1 class="titulo">Encriptador ONE</h1>
+	</header>
+	<main>
+
+		<div id="principal">
+
+			<div class="inputmsg container">
+
+	    		<textarea name="message-input" class="text-input" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+		 		<p class="warning"><i id="signo" class="fa-solid fa-circle-exclamation"></i>Solo ingrese minúsculas y sin acentos.</p>
+				<div id="button-container">
+		 			<button class="boton" id="btnEncriptar" onclick="activarEncrypt()" >Encriptar <i class="fa-solid fa-lock"></i></button>
+		 			<button class="boton" id="btnDesencriptar" onclick="activarDecrypt()">Desencriptar <i class="fa-solid fa-lock-open"></i></button>
+				</div>
+
+			</div>
+		
+			<div class="outputmsg container">
+			
+				<img  class="imagen" src="./images/Muñeco.png" alt="Muñeco">
+				<textarea name="message-output" class="text-output" cols="30" rows="10" placeholder="Ningún mensaje fue encontrado"></textarea>
+				<input type="button" value="Copiar" id="copy" onclick="copiar()">
+
+			</div>
+
+		</div> 
+        
+
+    </main>
+	<script src="script.js"></script>
+
+	<footer>
+		<p><i class="fa-solid fa-copyright"></i> Maira Cayano 2022 / #challengeonecodificador3</p>
+		<nav>
+			<a href="http://https://www.linkedin.com/in/maira-cayano/" target="_blank"><img class="iconos" src="./images/linkedin.png" alt="icono linkedin"></a>
+			<a href="https://github.com/maiCay" target="_blank" ><img class="iconos" src="./images/github.png" alt="icono github"></a>
+		</nav>
+	</footer>
+
+ 
+    
+</body>
+</html>
