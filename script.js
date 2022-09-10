@@ -2,6 +2,11 @@ const INPUT = document.querySelector(".text-input");
 
 const OUTPUT = document.querySelector(".text-output");
 
+const BTN_COPY = document.querySelector("#copy");
+BTN_COPY.style.display = "none";
+
+const MENSAJE = document.querySelector(".placeholder");
+
 
 
 const VALUES = [["e", "enter"], ["i", "imes"], ["a", "ai"],  ["o", "ober"], ["u", "ufat"]]
@@ -9,7 +14,10 @@ const VALUES = [["e", "enter"], ["i", "imes"], ["a", "ai"],  ["o", "ober"], ["u"
 function activarEncrypt() {
     const TEXTO_ENCRIPTADO = encriptarStr(INPUT.value);
     OUTPUT.value = TEXTO_ENCRIPTADO;
+    OUTPUT.style.backgroundImage = "none";
     INPUT.value = "";
+    BTN_COPY.style.display = "block";
+    MENSAJE.style.display = "none"
 }
 
 function encriptarStr(stringInput) {
@@ -35,10 +43,11 @@ function encriptarStr(stringInput) {
 }
 
 
-function activarDecrypt() {
+function activarDecrypt() { 
     const TEXTO_ENCRIPTADO = desencriptarStr(INPUT.value);
     OUTPUT.value = TEXTO_ENCRIPTADO;
     INPUT.value = "";
+    
 }
 
 function desencriptarStr(stringInput) {
